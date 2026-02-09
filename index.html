@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Black Fence Reserve | Heritage Beef • Limited Allocations</title>
+  <meta name="description" content="Exclusive, small-batch heritage beef from a private herd. By allocation only. Pasture-raised with uncompromising standards." />
+  <meta name="theme-color" content="#0B0B0D" />
+
+  <!-- Optional: swap to your preferred premium serif/sans later -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#0B0B0D;
+      --black-2:#131318;
+      --cream:#F3EFE6;
+      --cream-2:#E8E1D3;
+      --gold:#C9A24C;
+      --gold-2:#A8832C;
+      --text:#111115;
+      --muted:#6E6A62;
+      --card:rgba(243,239,230,0.82);
+      --shadow: 0 16px 40px rgba(0,0,0,0.25);
+      --shadow-soft: 0 10px 24px rgba(0,0,0,0.18);
+      --radius: 18px;
+      --radius-lg: 26px;
+      --max: 1160px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--cream);
+      background: radial-gradient(1200px 500px at 20% -10%, rgba(201,162,76,0.18), transparent 60%),
+                  radial-gradient(900px 420px at 90% 0%, rgba(201,162,76,0.14), transparent 55%),
+                  linear-gradient(180deg, var(--black), var(--black-2));
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+
+    /* Top utility bar */
+    .topbar{
+      background: rgba(0,0,0,0.35);
+      border-bottom: 1px solid rgba(201,162,76,0.22);
+      backdrop-filter: blur(10px);
+    }
+    .topbar .row{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 0;
+      gap:12px;
+      font-size:13px;
+      color: rgba(243,239,230,0.85);
+    }
+    .topbar .left, .topbar .right{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px;
+      border:1px solid rgba(201,162,76,0.25);
+      border-radius:999px;
+      background: rgba(11,11,13,0.35);
+    }
+    .dot{width:6px; height:6px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 3px rgba(201,162,76,0.18)}
+
+    /* Header / Nav */
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(11,11,13,0.55);
+      border-bottom: 1px solid rgba(201,162,76,0.22);
+      backdrop-filter: blur(14px);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:14px;
+      min-width: 220px;
+    }
+    .brand img{
+      width:54px; height:54px; object-fit:contain;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.35));
+    }
+    .brand .name{
+      display:flex; flex-direction:column; line-height:1.05;
+    }
+    .brand .name strong{
+      font-family:"Cormorant Garamond", serif;
+      font-weight:700;
+      font-size:20px;
+      letter-spacing:0.4px;
+    }
+    .brand .name span{
+      font-size:12px;
+      color: rgba(243,239,230,0.78);
+      letter-spacing:1.8px;
+      text-transform:uppercase;
+      margin-top:4px;
+    }
+
+    nav ul{
+      list-style:none; margin:0; padding:0;
+      display:flex; align-items:center; gap:18px;
+    }
+    nav a{
+      font-size:14px;
+      color: rgba(243,239,230,0.86);
+      padding:10px 10px;
+      border-radius:12px;
+      transition: background .2s ease, color .2s ease;
+    }
+    nav a:hover{background: rgba(201,162,76,0.10); color: var(--cream)}
+    .cta{
+      display:flex; align-items:center; gap:10px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,162,76,0.35);
+      background: rgba(201,162,76,0.12);
+      color: var(--cream);
+      font-weight:600;
+      font-size:14px;
+      letter-spacing:0.2px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+      transition: transform .15s ease, background .2s ease, border-color .2s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(201,162,76,0.18); border-color: rgba(201,162,76,0.55)}
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(201,162,76,0.95), rgba(168,131,44,0.95));
+      color: #111115;
+      border-color: rgba(0,0,0,0.25);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .btn.primary:hover{background: linear-gradient(180deg, rgba(201,162,76,1), rgba(168,131,44,1));}
+
+    .hamburger{display:none}
+
+    /* Hero */
+    .hero{
+      position:relative;
+      padding: 72px 0 36px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      align-items:stretch;
+    }
+    .hero-card{
+      border-radius: var(--radius-lg);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(201,162,76,0.18);
+      background:
+        radial-gradient(900px 400px at 25% 0%, rgba(201,162,76,0.16), transparent 60%),
+        linear-gradient(135deg, rgba(243,239,230,0.10), rgba(11,11,13,0.65));
+      position:relative;
+      min-height: 520px;
+    }
+    .hero-media{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(0deg, rgba(11,11,13,0.72), rgba(11,11,13,0.25)),
+        url("https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=2200&q=80") center/cover no-repeat;
+      filter: contrast(1.05) saturate(1.0);
+    }
+    .hero-content{
+      position:relative;
+      padding: 34px 34px 30px;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      gap:14px;
+    }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:12px;
+      letter-spacing:2.6px;
+      text-transform:uppercase;
+      color: rgba(243,239,230,0.86);
+    }
+    .kicker .line{
+      height:1px; width:44px; background: rgba(201,162,76,0.6);
+    }
+    h1{
+      margin:0;
+      font-family:"Cormorant Garamond", serif;
+      font-weight:700;
+      font-size: 56px;
+      line-height: 1.02;
+      letter-spacing: 0.2px;
+      text-shadow: 0 16px 40px rgba(0,0,0,0.45);
+    }
+    .sub{
+      margin:0;
+      max-width: 60ch;
+      color: rgba(243,239,230,0.88);
+      font-size:16px;
+      line-height:1.6;
+    }
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:6px}
+    .micro{
+      margin-top: 6px;
+      color: rgba(243,239,230,0.75);
+      font-size: 13px;
+    }
+
+    /* Side panel */
+    .side{
+      display:flex; flex-direction:column; gap:18px;
+    }
+    .panel{
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(201,162,76,0.18);
+      background: rgba(11,11,13,0.55);
+      box-shadow: var(--shadow-soft);
+      overflow:hidden;
+    }
+    .panel .head{
+      padding: 18px 18px 12px;
+      border-bottom: 1px solid rgba(201,162,76,0.16);
+      display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
+    }
+    .panel h3{
+      margin:0;
+      font-family:"Cormorant Garamond", serif;
+      font-size: 26px;
+      letter-spacing:0.2px;
+    }
+    .panel .tag{
+      font-size: 12px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: rgba(243,239,230,0.78);
+      border: 1px solid rgba(201,162,76,0.22);
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(201,162,76,0.08);
+      white-space:nowrap;
+      align-self:center;
+    }
+    .panel .body{padding: 14px 18px 18px}
+    .bullets{display:grid; gap:12px; margin:0; padding:0; list-style:none}
+    .bullets li{
+      display:flex; gap:12px; align-items:flex-start;
+      padding: 12px 12px;
+      border-radius: 16px;
+      background: rgba(243,239,230,0.06);
+      border: 1px solid rgba(201,162,76,0.10);
+    }
+    .icon{
+      width: 30px; height: 30px; border-radius: 10px;
+      background: rgba(201,162,76,0.14);
+      border: 1px solid rgba(201,162,76,0.28);
+      display:grid; place-items:center;
+      color: var(--gold);
+      flex: 0 0 auto;
+      margin-top:2px;
+    }
+    .bullets strong{display:block; font-weight:700; font-size:14px; margin-bottom:2px}
+    .bullets span{color: rgba(243,239,230,0.78); font-size:13px; line-height:1.45}
+
+    /* Section base */
+    section{padding: 58px 0}
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap;
+      margin-bottom: 18px;
+    }
+    .eyebrow{
+      color: rgba(201,162,76,0.9);
+      font-size: 12px;
+      letter-spacing: 2.6px;
+      text-transform: uppercase;
+    }
+    .title{
+      margin: 6px 0 0;
+      font-family:"Cormorant Garamond", serif;
+      font-weight:700;
+      font-size: 42px;
+      letter-spacing:0.2px;
+    }
+    .lead{
+      margin: 10px 0 0;
+      color: rgba(243,239,230,0.82);
+      max-width: 70ch;
+      line-height:1.7;
+      font-size: 15px;
+    }
+
+    /* Cards */
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px;}
+    .grid-2{display:grid; grid-template-columns: repeat(2, 1fr); gap: 16px;}
+    .card{
+      border-radius: var(--radius);
+      border: 1px solid rgba(201,162,76,0.18);
+      background: rgba(11,11,13,0.48);
+      box-shadow: var(--shadow-soft);
+      overflow:hidden;
+    }
+    .card .pad{padding: 18px}
+    .card h4{
+      margin:0 0 8px;
+      font-size: 16px;
+      letter-spacing:0.2px;
+    }
+    .card p{
+      margin:0;
+      color: rgba(243,239,230,0.78);
+      font-size: 14px;
+      line-height:1.6;
+    }
+    .thumb{
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 1px solid rgba(201,162,76,0.14);
+      filter: contrast(1.03) saturate(1.02);
+    }
+
+    /* Allocation section */
+    .alloc{
+      background: radial-gradient(900px 420px at 20% 0%, rgba(201,162,76,0.12), transparent 60%),
+                  linear-gradient(180deg, rgba(11,11,13,0.1), rgba(11,11,13,0.0));
+      border-top: 1px solid rgba(201,162,76,0.16);
+      border-bottom: 1px solid rgba(201,162,76,0.16);
+    }
+    .tiers{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-top: 18px;}
+    .tier{
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(201,162,76,0.18);
+      background: linear-gradient(135deg, rgba(243,239,230,0.06), rgba(11,11,13,0.65));
+      box-shadow: var(--shadow-soft);
+      padding: 18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .tier:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(420px 240px at 20% 0%, rgba(201,162,76,0.18), transparent 60%);
+      pointer-events:none;
+    }
+    .tier .top{position:relative}
+    .tier .label{
+      display:inline-flex; gap:8px; align-items:center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,162,76,0.25);
+      background: rgba(201,162,76,0.10);
+      font-size: 12px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: rgba(243,239,230,0.86);
+    }
+    .tier h3{
+      position:relative;
+      margin: 12px 0 6px;
+      font-family:"Cormorant Garamond", serif;
+      font-size: 30px;
+      letter-spacing:0.2px;
+    }
+    .price{
+      position:relative;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--cream);
+      margin: 10px 0 10px;
+    }
+    .price small{font-size: 13px; font-weight: 600; color: rgba(243,239,230,0.72)}
+    .tier ul{position:relative; margin: 12px 0 14px; padding-left: 18px; color: rgba(243,239,230,0.80); line-height:1.7; font-size:14px}
+    .tier .tier-actions{position:relative; display:flex; gap:10px; flex-wrap:wrap}
+    .note{
+      margin-top: 10px;
+      color: rgba(243,239,230,0.70);
+      font-size: 13px;
+      line-height:1.6;
+    }
+
+    /* Chef strip */
+    .chef-strip{
+      display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px;
+    }
+    .chef{
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,162,76,0.22);
+      background: rgba(243,239,230,0.06);
+      color: rgba(243,239,230,0.82);
+      font-size: 13px;
+    }
+
+    /* FAQ */
+    details{
+      border-radius: 16px;
+      border: 1px solid rgba(201,162,76,0.18);
+      background: rgba(11,11,13,0.48);
+      padding: 14px 16px;
+      box-shadow: var(--shadow-soft);
+    }
+    details summary{
+      cursor:pointer;
+      font-weight: 700;
+      color: rgba(243,239,230,0.92);
+    }
+    details p{
+      margin: 10px 0 0;
+      color: rgba(243,239,230,0.78);
+      line-height:1.7;
+      font-size: 14px;
+    }
+    .faq{display:grid; gap:12px; margin-top: 18px;}
+
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    label{display:block; font-size: 13px; color: rgba(243,239,230,0.80); margin-bottom: 8px}
+    input, textarea, select{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(201,162,76,0.20);
+      background: rgba(243,239,230,0.06);
+      color: var(--cream);
+      outline:none;
+    }
+    textarea{min-height: 120px; resize: vertical}
+    input::placeholder, textarea::placeholder{color: rgba(243,239,230,0.55)}
+    .form-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top: 12px}
+    .fineprint{font-size: 12px; color: rgba(243,239,230,0.65); line-height:1.6; margin-top: 12px}
+
+    /* Footer */
+    footer{
+      padding: 26px 0 40px;
+      border-top: 1px solid rgba(201,162,76,0.16);
+      color: rgba(243,239,230,0.70);
+      font-size: 13px;
+    }
+    .footer-row{
+      display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr; }
+      .hero-card{min-height: 520px}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .tiers{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      nav ul{display:none}
+      .hamburger{
+        display:inline-flex;
+        border-radius: 14px;
+        border:1px solid rgba(201,162,76,0.26);
+        background: rgba(201,162,76,0.10);
+        padding: 10px 12px;
+        cursor:pointer;
+      }
+      .mobile{
+        display:none;
+        border-top: 1px solid rgba(201,162,76,0.18);
+        padding: 10px 0 16px;
+      }
+      .mobile a{
+        display:block;
+        padding: 10px 10px;
+        border-radius: 12px;
+        color: rgba(243,239,230,0.86);
+      }
+      .mobile a:hover{background: rgba(201,162,76,0.10)}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="row">
+        <div class="left">
+          <span class="pill"><span class="dot"></span> Allocation season: <strong>Open</strong></span>
+          <span class="pill">Heritage beef • Pasture-raised • By reservation</span>
+        </div>
+        <div class="right">
+          <span class="pill">info@blackfencereserve.com</span>
+          <span class="pill">(555) 123-4567</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="#top">
+          <!-- Use your 2nd logo here -->
+          <img src="logo-bfr.png" alt="Black Fence Reserve Logo" />
+          <div class="name">
+            <strong>Black Fence Reserve</strong>
+            <span>Heritage Beef • Limited Allocations</span>
+          </div>
+        </a>
+
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#raised">How It’s Raised</a></li>
+            <li><a href="#allocations">Allocations</a></li>
+            <li><a href="#chefs">Chef Partners</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="cta">
+          <button class="hamburger" id="hamburger" aria-label="Open menu">Menu</button>
+          <a class="btn" href="#allocations">View Allocations</a>
+          <a class="btn primary" href="#contact">Reserve a Share</a>
+        </div>
+      </div>
+
+      <div class="mobile" id="mobileNav">
+        <a href="#about">About</a>
+        <a href="#raised">How It’s Raised</a>
+        <a href="#allocations">Allocations</a>
+        <a href="#chefs">Chef Partners</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top" class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="hero-media" role="img" aria-label="Cattle grazing in a pasture at golden hour"></div>
+          <div class="hero-content">
+            <div class="kicker"><span class="line"></span> HERITAGE BEEF • PRIVATE HERD • LIMITED RELEASES</div>
+            <h1>Reserve beef you can trust.</h1>
+            <p class="sub">
+              Black Fence Reserve is a small-batch program built around one principle:
+              <strong>you should know the animal, the process, and the standard</strong>.
+              Our beef is offered by allocation—never commodity, never rushed.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#allocations">Reserve Your Allocation</a>
+              <a class="btn" href="#raised">See Our Standards</a>
+            </div>
+            <div class="micro">
+              Transparent harvests • Consistent cuts • White-glove customer experience
+            </div>
+          </div>
+        </div>
+
+        <div class="side">
+          <div class="panel">
+            <div class="head">
+              <div>
+                <div class="eyebrow">THE RESERVE STANDARD</div>
+                <h3>Raised with intention.</h3>
+              </div>
+              <div class="tag">By Allocation</div>
+            </div>
+            <div class="body">
+              <ul class="bullets">
+                <li>
+                  <div class="icon">✓</div>
+                  <div>
+                    <strong>Single herd, limited release</strong>
+                    <span>We do not chase volume. We protect quality and consistency.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">✓</div>
+                  <div>
+                    <strong>Pasture-first raising</strong>
+                    <span>Rotational grazing with clean water, minerals, and low-stress handling.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">✓</div>
+                  <div>
+                    <strong>Chef-validated finishes</strong>
+                    <span>Partner chefs select harvest windows—taste is the final metric.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="head">
+              <div>
+                <div class="eyebrow">HOW TO BUY</div>
+                <h3>Reserve. Receive. Repeat.</h3>
+              </div>
+              <div class="tag">Simple</div>
+            </div>
+            <div class="body">
+              <ul class="bullets">
+                <li>
+                  <div class="icon">1</div>
+                  <div>
+                    <strong>Choose an allocation</strong>
+                    <span>Quarter, half, or curated monthly reserve box.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">2</div>
+                  <div>
+                    <strong>Confirm your harvest</strong>
+                    <span>We coordinate processing & cut preferences with white-glove support.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">3</div>
+                  <div>
+                    <strong>Pickup or delivery</strong>
+                    <span>Local pickup, scheduled delivery, or freezer drop options (region-dependent).</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="note">Tip: Start with a <strong>Quarter Share</strong> for the best first experience.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- About -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">ABOUT BLACK FENCE RESERVE</div>
+          <h2 class="title">Heritage beef. Uncompromising quality.</h2>
+          <p class="lead">
+            We operate like a reserve winery: limited lots, consistent standards, and full transparency.
+            Each harvest is planned, documented, and delivered with a premium customer experience.
+          </p>
+        </div>
+        <a class="btn" href="#contact">Request Allocation Info</a>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=2000&q=80');"></div>
+          <div class="pad">
+            <h4>Private Herd, Limited Access</h4>
+            <p>We reserve beef for members first, then open any remaining inventory by waitlist.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2000&q=80');"></div>
+          <div class="pad">
+            <h4>Calm Handling, Better Beef</h4>
+            <p>Low-stress handling and pasture-first routines protect animal welfare and finished quality.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=2000&q=80');"></div>
+          <div class="pad">
+            <h4>Chef-Validated Finish</h4>
+            <p>Partner chefs guide finish windows and tasting benchmarks—so quality stays consistent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it's raised -->
+  <section id="raised">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">HOW OUR CATTLE ARE RAISED</div>
+          <h2 class="title">A standard you can explain—without excuses.</h2>
+          <p class="lead">
+            Luxury beef starts long before the butcher. We focus on pasture management, animal comfort,
+            clean inputs, and consistent finishing so every box tastes like it belongs to the Reserve.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1524593166156-312f362cada0?auto=format&fit=crop&w=2000&q=80');"></div>
+          <div class="pad">
+            <h4>Rotational Grazing</h4>
+            <p>Managed moves protect pasture health, improve forage quality, and support consistent gains.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1560732488-6b0df240254a?auto=format&fit=crop&w=2000&q=80');"></div>
+          <div class="pad">
+            <h4>Clean Water & Minerals</h4>
+            <p>Fresh water access and a disciplined mineral program support health, appetite, and finish quality.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?auto=format&fit=crop&w=2000&q=80');"></div>
+          <div class="pad">
+            <h4>No Shortcuts</h4>
+            <p>We don’t rush animals for volume. Quality comes from time, calmness, and consistent inputs.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1505575972945-2804b21e79f7?auto=format&fit=crop&w=2000&q=80');"></div>
+          <div class="pad">
+            <h4>Transparent Harvests</h4>
+            <p>Allocation members receive harvest notes, cut guidance, and recommended cooking references.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Allocations -->
+  <section id="allocations" class="alloc">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">ALLOCATIONS</div>
+          <h2 class="title">Reserve your share of the herd.</h2>
+          <p class="lead">
+            We sell beef the way premium producers do: by release. Choose a share or reserve box,
+            then confirm your harvest window. Everything is coordinated with white-glove support.
+          </p>
+        </div>
+        <a class="btn primary" href="#contact">Reserve Now</a>
+      </div>
+
+      <div class="tiers">
+        <div class="tier">
+          <div class="top">
+            <div class="label">Best First Experience</div>
+            <h3>Quarter Share</h3>
+            <div class="price">$1,650 <small>+ processing</small></div>
+            <ul>
+              <li>~100–120 lbs mixed cuts</li>
+              <li>Great balance of steaks/roasts/ground</li>
+              <li>Cut-sheet guidance included</li>
+              <li>Pickup or scheduled delivery (region)</li>
+            </ul>
+            <div class="tier-actions">
+              <a class="btn primary" href="#contact">Reserve Quarter</a>
+              <a class="btn" href="#faq">Questions</a>
+            </div>
+            <div class="note">Pricing is a placeholder—adjust to your region and program standards.</div>
+          </div>
+        </div>
+
+        <div class="tier">
+          <div class="top">
+            <div class="label">Most Popular</div>
+            <h3>Half Share</h3>
+            <div class="price">$3,050 <small>+ processing</small></div>
+            <ul>
+              <li>~200–240 lbs mixed cuts</li>
+              <li>More premium cuts + freezer depth</li>
+              <li>Priority on harvest windows</li>
+              <li>Cooking guide + chef notes</li>
+            </ul>
+            <div class="tier-actions">
+              <a class="btn primary" href="#contact">Reserve Half</a>
+              <a class="btn" href="#contact">Talk to Us</a>
+            </div>
+            <div class="note">Ideal for families or split between friends.</div>
+          </div>
+        </div>
+
+        <div class="tier">
+          <div class="top">
+            <div class="label">Curated & Convenient</div>
+            <h3>Reserve Box</h3>
+            <div class="price">$165 <small>/ month</small></div>
+            <ul>
+              <li>~15 lbs curated cuts</li>
+              <li>Steaks rotate based on release</li>
+              <li>Member-only drops & add-ons</li>
+              <li>Pause or upgrade anytime</li>
+            </ul>
+            <div class="tier-actions">
+              <a class="btn primary" href="#contact">Start Box</a>
+              <a class="btn" href="#contact">Join Waitlist</a>
+            </div>
+            <div class="note">Great for consistent quality without committing to a full share.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chef Partners -->
+  <section id="chefs">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">CHEF PARTNERS</div>
+          <h2 class="title">Chef-validated. Customer reserved.</h2>
+          <p class="lead">
+            Our chef partnerships are built for quality validation and storytelling—not commodity supply.
+            Select chefs help define harvest windows and tasting benchmarks so every release earns the Reserve name.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="pad">
+          <h4>How partnerships work</h4>
+          <p>
+            Chef partners participate in tasting sessions and occasionally feature named harvests on menus.
+            Most inventory remains reserved for allocation members.
+          </p>
+          <div class="chef-strip">
+            <span class="chef">Chef Partner • City, ST</span>
+            <span class="chef">Chef Partner • City, ST</span>
+            <span class="chef">Chef Partner • City, ST</span>
+            <span class="chef">Private Dinner Collaborations</span>
+          </div>
+          <div class="note">Replace with real chef names once partnerships are confirmed.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">FAQ</div>
+          <h2 class="title">Straight answers. Clean expectations.</h2>
+          <p class="lead">
+            Allocations are a premium experience when the rules are clear. Here are the questions we get most.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>What does “allocation” mean?</summary>
+          <p>
+            It means inventory is reserved in advance for members. We schedule harvest windows, coordinate your processing,
+            and deliver a consistent experience each release—rather than selling random cuts on a shelf.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do you ship?</summary>
+          <p>
+            Many farms offer local delivery or freezer drops. If you want nationwide shipping, we can build that—but the
+            premium model is strongest with regional pickup/delivery so experience and product integrity stay high.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do I get to choose my cuts?</summary>
+          <p>
+            For quarter/half shares, yes—within the processor’s cut sheet options. We provide guidance so you get a balanced box
+            and avoid common first-timer mistakes.
+          </p>
+        </details>
+
+        <details>
+          <summary>Is it grass-fed/grass-finished?</summary>
+          <p>
+            Your site can state your exact standard here (grass-fed, pasture-raised, finishing protocol, etc.).
+            Luxury brands win by being specific and truthful.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">CONTACT</div>
+          <h2 class="title">Reserve a share.</h2>
+          <p class="lead">
+            Tell us what you’re looking for and we’ll confirm current availability, pricing, and the next harvest window.
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card">
+          <div class="pad">
+            <h4>Request allocation availability</h4>
+
+            <!-- Demo form: replace action with your form backend (Formspree, Netlify, etc.) -->
+            <form id="reserveForm" action="#" method="post">
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+                <div>
+                  <label for="name">Full name</label>
+                  <input id="name" name="name" placeholder="Your name" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="you@email.com" required />
+                </div>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;">
+                <div>
+                  <label for="plan">Interested in</label>
+                  <select id="plan" name="plan" required>
+                    <option value="" selected disabled>Select an option</option>
+                    <option>Quarter Share</option>
+                    <option>Half Share</option>
+                    <option>Reserve Box (Monthly)</option>
+                    <option>Chef Collaboration</option>
+                    <option>General Question</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="phone">Phone (optional)</label>
+                  <input id="phone" name="phone" placeholder="(###) ###-####" />
+                </div>
+              </div>
+
+              <div style="margin-top:12px;">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us your ideal timing, pickup/delivery preference, and any questions."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn primary" type="submit">Send Request</button>
+                <a class="btn" href="#allocations">Review Allocations</a>
+              </div>
+
+              <div class="fineprint">
+                This demo form doesn’t send anywhere yet. If you want, I can wire it to Formspree/Netlify Forms
+                and make it production-ready in 2 minutes.
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="pad">
+            <h4>Direct</h4>
+            <p><strong>Email:</strong> info@blackfencereserve.com</p>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+            <p style="margin-top:10px; color: rgba(243,239,230,0.78);">
+              <strong>Pickup/Delivery:</strong> By scheduled appointment to protect cold chain integrity and customer experience.
+            </p>
+
+            <div style="margin-top:14px; padding:14px; border-radius:16px; border:1px solid rgba(201,162,76,0.18); background: rgba(243,239,230,0.06);">
+              <div class="eyebrow">THE LUXURY PROMISE</div>
+              <p style="margin:8px 0 0; color: rgba(243,239,230,0.82); line-height:1.7; font-size:14px;">
+                We will never oversell inventory. If allocations are full, we offer a waitlist and announce releases
+                to members first—because trust is the brand.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-row">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <img src="logo-bfr.png" alt="Black Fence Reserve" style="width:40px; height:40px; object-fit:contain;" />
+          <div>
+            <div style="font-weight:700; color: rgba(243,239,230,0.9);">Black Fence Reserve</div>
+            <div>Heritage Beef • Limited Allocations</div>
+          </div>
+        </div>
+        <div>
+          © <span id="year"></span> Black Fence Reserve. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    if (hamburger && mobileNav) {
+      hamburger.addEventListener('click', () => {
+        const isOpen = mobileNav.style.display === 'block';
+        mobileNav.style.display = isOpen ? 'none' : 'block';
+      });
+
+      // Close menu when clicking a link
+      mobileNav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => { mobileNav.style.display = 'none'; });
+      });
+    }
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Demo form handler (prevents reload). Replace with real backend.
+    const form = document.getElementById('reserveForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert("Request captured (demo). Hook this form to Formspree/Netlify and it will send instantly.");
+        form.reset();
+      });
+    }
+  </script>
+</body>
+</html>
